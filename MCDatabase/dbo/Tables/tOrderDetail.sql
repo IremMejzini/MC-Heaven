@@ -8,4 +8,12 @@
     CONSTRAINT [FK_tOrderDetail_tOrderID] FOREIGN KEY ([OrderID]) REFERENCES [dbo].[tOrder] ([OrderID]),
     CONSTRAINT [FK_tOrderDetail_tReceiveID] FOREIGN KEY ([ReceiveID]) REFERENCES [dbo].[tReceive] ([ReceiveID])
 );
-
+GO
+EXECUTE sp_addextendedproperty
+	@name = N'MS_Description',
+	@value = N'Details about the order.',
+	@level0type = N'SCHEMA',
+	@level0name = N'dbo',
+	@level1type = N'TABLE',
+	@level1name = N'tOrderDetails';
+GO

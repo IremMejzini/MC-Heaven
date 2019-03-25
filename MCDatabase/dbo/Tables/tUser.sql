@@ -12,4 +12,12 @@
     CONSTRAINT [FK_tUser_tAddressID] FOREIGN KEY ([AddressID]) REFERENCES [dbo].[tAddress] ([AddressID]),
     CONSTRAINT [AK_tUser_UserLogin] UNIQUE NONCLUSTERED ([UserLogin] ASC)
 );
-
+GO
+EXECUTE sp_addextendedproperty
+	@name = N'MS_Description',
+	@value = N'Information about the users.',
+	@level0type = N'SCHEMA',
+	@level0name = N'dbo',
+	@level1type = N'TABLE',
+	@level1name = N'tUser';
+GO

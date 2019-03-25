@@ -11,4 +11,12 @@
     CONSTRAINT [FK_tOrder_tPaymentMID] FOREIGN KEY ([PaymentMID]) REFERENCES [dbo].[tPaymentMethod] ([PaymentMID]),
     CONSTRAINT [FK_tOrder_tShopID] FOREIGN KEY ([ShopID]) REFERENCES [dbo].[tShop] ([ShopID])
 );
-
+GO
+EXECUTE sp_addextendedproperty
+	@name = N'MS_Description',
+	@value = N'What drinks customers ordered.',
+	@level0type = N'SCHEMA',
+	@level0name = N'dbo',
+	@level1type = N'TABLE',
+	@level1name = N'tOrder';
+GO
