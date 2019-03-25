@@ -1,0 +1,10 @@
+c:\users\iremm\source\repos\MCDatabase\MCDatabase\bin\Debug\MCDatabase.dacpac
+c:\users\iremm\source\repos\MCDatabase\MCDatabase\bin\Debug\MCDatabase.dll
+c:\users\iremm\source\repos\MCDatabase\MCDatabase\bin\Debug\MCDatabase.pdb
+c:\users\iremm\source\repos\MCDatabase\MCDatabase\obj\Debug\MCDatabase.sqlprojAssemblyReference.cache
+c:\users\iremm\source\repos\MCDatabase\MCDatabase\obj\Debug\Model.xml
+c:\users\iremm\source\repos\MCDatabase\MCDatabase\obj\Debug\refactor.xml
+c:\users\iremm\source\repos\MCDatabase\MCDatabase\obj\Debug\postdeploy.sql
+c:\users\iremm\source\repos\MCDatabase\MCDatabase\obj\Debug\predeploy.sql
+c:\users\iremm\source\repos\MCDatabase\MCDatabase\obj\Debug\MCDatabase.dll
+c:\users\iremm\source\repos\MCDatabase\MCDatabase\obj\Debug\MCDatabase.pdb
