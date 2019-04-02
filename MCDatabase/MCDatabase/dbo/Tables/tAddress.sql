@@ -7,6 +7,7 @@
     [City]        NVARCHAR (30) NOT NULL,
     CONSTRAINT [PK_tAddress_AddressID] PRIMARY KEY CLUSTERED ([AddressID] ASC)
 );
+GO
 EXECUTE sp_addextendedproperty
 	@name = N'MS_Description',
 	@value = N'Contains all addresses for clients and employees.',

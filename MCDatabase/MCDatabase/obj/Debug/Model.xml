@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="MCDatabase.dll" />
-			<Metadata Name="FileName" Value="C:\USERS\IREMM\SOURCE\REPOS\MCDATABASE\MCDATABASE\OBJ\DEBUG\MCDATABASE.DLL" />
+			<Metadata Name="FileName" Value="C:\USERS\IREMM\SOURCE\REPOS\MC-HEAVEN\MCDATABASE\MCDATABASE\OBJ\DEBUG\MCDATABASE.DLL" />
 			<Metadata Name="AssemblyName" Value="MCDatabase" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="c:\users\iremm\source\repos\MCDatabase\MCDatabase\obj\Debug\MCDatabase.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\iremm\source\repos\MC-Heaven\MCDatabase\MCDatabase\obj\Debug\MCDatabase.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
@@ -1749,6 +1749,16 @@
 			<AttachedAnnotation Disambiguator="31" />
 			<AttachedAnnotation Disambiguator="18" />
 			<AttachedAnnotation Disambiguator="4" />
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlTableBase].[dbo].[tAddress].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'Contains all addresses for clients and employees.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dbo].[tAddress]" />
+				</Entry>
+			</Relationship>
 		</Element>
 	</Model>
 </DataSchemaModel>
