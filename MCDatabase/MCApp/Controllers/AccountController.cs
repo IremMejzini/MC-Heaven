@@ -16,5 +16,9 @@ namespace MCApp.Controllers
         {
             return View();
         }
+        public IActionResult Registered()
+        {
+            return View();
+        }
     }
 }
