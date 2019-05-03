@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MCDatabase", "MCDatabase\MCDatabase.sqlproj", "{09BD1F5C-781B-479C-A433-EB3CD18831E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCApp", "MCApp\MCApp.csproj", "{EA42F9C4-99E6-4512-B5F2-942798B00118}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCApp", "MCApp\MCApp.csproj", "{EA42F9C4-99E6-4512-B5F2-942798B00118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "McAppTest", "McAppTest\McAppTest.csproj", "{DCF50ACC-12CD-4587-A497-9748816D3A62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{EA42F9C4-99E6-4512-B5F2-942798B00118}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA42F9C4-99E6-4512-B5F2-942798B00118}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA42F9C4-99E6-4512-B5F2-942798B00118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCF50ACC-12CD-4587-A497-9748816D3A62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCF50ACC-12CD-4587-A497-9748816D3A62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCF50ACC-12CD-4587-A497-9748816D3A62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCF50ACC-12CD-4587-A497-9748816D3A62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

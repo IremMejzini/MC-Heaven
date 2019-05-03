@@ -1,0 +1,49 @@
+﻿@model MCApp.Models.TOpenHour
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>TOpenHour</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FromO" class="control-label"></label>
+                <input asp-for="FromO" class="form-control" />
+                <span asp-validation-for="FromO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToO" class="control-label"></label>
+                <input asp-for="ToO" class="form-control" />
+                <span asp-validation-for="ToO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsSunday" class="control-label"></label>
+                <input asp-for="IsSunday" class="form-control" />
+                <span asp-validation-for="IsSunday" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsSaturday" class="control-label"></label>
+                <input asp-for="IsSaturday" class="form-control" />
+                <span asp-validation-for="IsSaturday" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShopId" class="control-label"></label>
+                <select asp-for="ShopId" class ="form-control" asp-items="ViewBag.ShopId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

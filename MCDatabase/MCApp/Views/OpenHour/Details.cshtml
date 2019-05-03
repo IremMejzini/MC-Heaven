@@ -1,0 +1,48 @@
+﻿@model MCApp.Models.TOpenHour
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>TOpenHour</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FromO)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FromO)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ToO)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ToO)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsSunday)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsSunday)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsSaturday)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsSaturday)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Shop)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Shop.NameShop)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.OpenHourId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
