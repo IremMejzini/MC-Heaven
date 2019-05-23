@@ -13,8 +13,4 @@ C:\Users\iremm\source\repos\MC-Heaven\MCDatabase\MCDatabase\obj\Debug\MCDatabase
 C:\Users\iremm\source\repos\MC-Heaven\MCDatabase\MCDatabase\obj\Debug\MCDatabase.pdb
 C:\Users\iremm\source\repos\MC-Heaven\MCDatabase\MCDatabase\bin\Debug\MCDatabase.dll
 C:\Users\iremm\source\repos\MC-Heaven\MCDatabase\MCDatabase\bin\Debug\MCDatabase.pdb
-C:\Users\iremm\source\repos\MC-Heaven\MCDatabase\MCDatabase\obj\Debug\Model.xml
-C:\Users\iremm\source\repos\MC-Heaven\MCDatabase\MCDatabase\obj\Debug\refactor.xml
-C:\Users\iremm\source\repos\MC-Heaven\MCDatabase\MCDatabase\obj\Debug\postdeploy.sql
-C:\Users\iremm\source\repos\MC-Heaven\MCDatabase\MCDatabase\obj\Debug\predeploy.sql
 C:\Users\iremm\source\repos\MC-Heaven\MCDatabase\MCDatabase\obj\Debug\MCDatabase.sqlprojAssemblyReference.cache
