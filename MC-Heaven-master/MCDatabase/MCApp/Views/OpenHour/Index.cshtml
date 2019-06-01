@@ -1,0 +1,59 @@
+﻿@model IEnumerable<MCApp.Models.TOpenHour>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FromO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsSunday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsSaturday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shop)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FromO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsSunday)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsSaturday)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shop.NameShop)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.OpenHourId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.OpenHourId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.OpenHourId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

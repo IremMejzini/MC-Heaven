@@ -1,0 +1,46 @@
+﻿@model MCApp.Models.TShop
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>TShop</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ShopId" />
+            <div class="form-group">
+                <label asp-for="NameShop" class="control-label"></label>
+                <input asp-for="NameShop" class="form-control" />
+                <span asp-validation-for="NameShop" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsDeliver" class="control-label"></label>
+                <input asp-for="IsDeliver" class="form-control" />
+                <span asp-validation-for="IsDeliver" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OpenHourId" class="control-label"></label>
+                <input asp-for="OpenHourId" class="form-control" />
+                <span asp-validation-for="OpenHourId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddressId" class="control-label"></label>
+                <input asp-for="AddressId" class="form-control" />
+                <span asp-validation-for="AddressId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

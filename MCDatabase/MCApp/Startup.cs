@@ -10,11 +10,14 @@ using Microsoft.AspNetCore.Http;
 using MCApp.Data;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Threading.Tasks;
 
 namespace MCApp
 {
     public class Startup
     {
+        private object services;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -32,7 +35,7 @@ namespace MCApp
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(
             Configuration.GetConnectionString("DefaultConnection")));
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, ApplicationRole>(options => options.Stores.MaxLengthForKeys = 128)
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
@@ -64,15 +67,14 @@ namespace MCApp
                 options.AccessDeniedPath = "/Account/AccessDenied"; // If the AccessDeniedPath is not set here, ASP.NET Core will default to/ Account / AccessDenied;
             options.SlidingExpiration = true;
             });
-            services.AddDefaultIdentity<ApplicationUser>()
-            .AddDefaultUI(UIFramework.Bootstrap4)
-            .AddEntityFrameworkStores<ApplicationDbContext>();
+            
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             var connection = @" Server=LAPTOP-K9MBT2S7\SQLCOURSE2019;Database=MCHeaven;Trusted_Connection=True;ConnectRetryCount=0";
             services.AddDbContext<MCHeavenContext>(options => options.UseSqlServer(connection));
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ApplicationDbContext context, UserManager<ApplicationUser> userManager, RoleManager<ApplicationRole> roleManager)
         {
             if (env.IsDevelopment())
             {
@@ -95,6 +97,10 @@ namespace MCApp
                 name: "default",
                 template: "{controller=Home}/{action=Index}/{id?}");
             });
+            DummyData.CreateUserRoles(context, userManager, roleManager).Wait();
+            
         }
+
+       
     }
 }
