@@ -48,11 +48,11 @@ namespace MCApp.Areas.Identity.Pages.Account
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
+            [Display(Name = "Create Password")]
             public string Password { get; set; }
 
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
+            [Display(Name = "Confirm Password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
 
@@ -65,8 +65,14 @@ namespace MCApp.Areas.Identity.Pages.Account
             [Required]
             [DataType(DataType.Text)]
             [StringLength(50, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 3)]
-            [Display(Name = "Last Name")]
-            public string LastName { get; set; }
+            [Display(Name = "Confirm Email")]
+            public string ConfirmEmail { get; set; }
+
+            [Required]
+            [DataType(DataType.Text)]
+            [StringLength(50, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 3)]
+            [Display(Name = "Location")]
+            public string Location { get; set; }
 
             [Range(18, 100)]
             [Display(Name = "Age")]
@@ -83,7 +89,7 @@ namespace MCApp.Areas.Identity.Pages.Account
             returnUrl = returnUrl ?? Url.Content("~/");
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = Input.FirstName, Email = Input.Email, FirstName=Input.FirstName, LastName=Input.LastName, Age=Input.Age };
+                var user = new ApplicationUser { UserName = Input.FirstName, Email = Input.Email, FirstName=Input.FirstName, LastName=Input.ConfirmEmail, Age=Input.Age };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
