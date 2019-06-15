@@ -156,7 +156,11 @@ namespace MCApp.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
+        public async Task<IActionResult> ShowCoffees()
+        {
+            
+            return View();
+        }
         private bool TDrinkExists(int id)
         {
             return _context.TDrink.Any(e => e.DrinkId == id);

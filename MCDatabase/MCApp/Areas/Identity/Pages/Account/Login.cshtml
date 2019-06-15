@@ -36,10 +36,13 @@
                     <button type="submit" class="btn btn-primary">Sign In</button>
                 </div>
                 <div class="form-group">
-               
+
                     <p>
-                        <button type="account" class="btn btn-primary" href="/account/create" name="CREATE AN ACCOUNT">Create an Account</button>
-                        @*<a class="fab-btn--secondary" href="/account/create" name="CREATE AN ACCOUNT"><span>Create an Account</span></a>*@
+                        <button type="button" class="btn btn-primary" href="/identity/account/register" name="CREATE AN ACCOUNT">Create an Account</button>
+                    <p>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Zarejestruj się jako nowy użytkownik</a>
+                    </p>
+                     @*<a class="fab-btn--secondary" href="/account/create" name="CREATE AN ACCOUNT"><span>Create an Account</span></a>*@
                     </p>
                 </div>
             </form>
