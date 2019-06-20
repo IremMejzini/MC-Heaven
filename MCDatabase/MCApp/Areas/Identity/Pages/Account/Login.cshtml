@@ -38,11 +38,8 @@
                 <div class="form-group">
 
                     <p>
-                        <button type="button" class="btn btn-primary" href="/identity/account/register" name="CREATE AN ACCOUNT">Create an Account</button>
-                    <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Zarejestruj się jako nowy użytkownik</a>
-                    </p>
-                     @*<a class="fab-btn--secondary" href="/account/create" name="CREATE AN ACCOUNT"><span>Create an Account</span></a>*@
+                        @*<button type="button" class="btn btn-primary" href="/identity/account/register" name="CREATE AN ACCOUNT">Create an Account</button>*@
+                     <a type="button" class="btn btn-primary" href="/Identity/Account/Register" name="CREATE AN ACCOUNT"><span>Create an Account</span></a>
                     </p>
                 </div>
             </form>
@@ -50,16 +47,13 @@
     </div>
     <div class="col-md-6 col-md-offset-2">
         <section>
-            <h4>Use another service to log in.</h4>
-            <hr />
+            
+            
             @{
                 if ((Model.ExternalLogins?.Count ?? 0) == 0)
                 {
                     <div>
-                        <p>
-                            There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
-                            for details on setting up this ASP.NET application to support logging in via external services.
-                        </p>
+                        
                     </div>
                 }
                 else
