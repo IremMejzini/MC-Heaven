@@ -1,0 +1,21 @@
+#slider .item {
+ height: 400px;
+ padding-top:100px;
+}
+#slide1 {
+    background: url('C:\Users\iremm\source\repos\MC-Heaven\MCDatabase\MCApp\Views\Home\newcovr.jpg') center no-repeat;
+}
+#slide2
+{
+	background: url('C:\Users\iremm\OneDrive\Desktop\Irem Fax\ProektLearnITGIRL\Images\juiceorg.jpg') center no-repeat;
+
+}
+#slide3
+{
+	background: url('C:\Users\iremm\OneDrive\Desktop\Irem Fax\ProektLearnITGIRL\Images\newcovr.jpg') center no-repeat;
+
+}
+.carousel-caption
+{
+	font-size: 18px; 
+}

@@ -135,6 +135,14 @@ strong {
 small {
   font-size: 80%;
 }
+#slider .item {
+    height: 400px;
+    padding-top:100px;
+}
+
+#slide1 {
+    background: url('C:\Users\iremm\source\repos\MC-Heaven\MCDatabase\MCApp\Views\Home\newcovr.jpg') center no-repeat;
+}
 
 sub,
 sup {
